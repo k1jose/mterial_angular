@@ -1,0 +1,69 @@
+.estilo {
+    .header {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+  
+      .brand-images {
+        display: flex;
+        gap: 15px;
+      }
+  
+      .brand-image {
+        height: 50px;
+        transition: border 0.3s ease;
+  
+        &:hover {
+          border: 2px solid lightblue;
+          border-radius: 5px;
+        }
+      }
+    }
+  
+    .product-section {
+      margin-bottom: 40px;
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+  
+    .product-card {
+      width: 250px;
+      transition: transform 0.3s ease;
+      margin: 0;
+  
+      &:hover {
+        transform: scale(1.05);
+        border: 2px solid lightblue;
+      }
+  
+      .product-image {
+        border-radius: 10px;
+        height: 150px;
+        object-fit: cover;
+      }
+  
+      .price {
+        font-weight: bold;
+        color: black;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+  
+        .discount {
+          color: red;
+          margin-right: 10px;
+        }
+      }
+  
+      .add-to-cart {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #e0f2f7;
+        border-radius: 20px;
+      }
+    }
+  }

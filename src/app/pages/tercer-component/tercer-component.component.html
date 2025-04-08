@@ -1,0 +1,34 @@
+<p>{{variable1}}</p>
+<p [innerText]="variable1"></p>
+@if (aroon.length>0) {
+    <h1>Cantidad de productos es ({{aroon.length}}) y los productos son:</h1>
+    <ul>
+        @for (item of aroon; track $index){
+            <li>{{item.id}}-{{item.title}}</li>
+        }
+    </ul>
+}@else {
+    <p>No hay productos</p>
+}
+
+<ul>
+    @for (item of aroon; track $index){
+        <li>{{item.id}}-{{item.title}}</li>
+    }@empty {
+        <p>No se encuentran los productos disponibles </p>
+    }
+</ul>
+
+<ul>
+    @for (item of aroon; track item.id ; let i=$index){
+       <li>
+        @switch (item.title){
+            @case ('juanitas') {:)}
+            @case ('nicoll') {:(}
+            @default {no las quiero - }
+        }
+        {{item.title}}
+       </li>
+
+    }
+</ul>

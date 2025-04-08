@@ -1,0 +1,28 @@
+<h2>Editar Estudiante</h2>
+
+<form>
+  <mat-form-field class="full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="editedStudent.name" name="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Teléfono</mat-label>
+    <input matInput [(ngModel)]="editedStudent.phone" name="phone">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Período</mat-label>
+    <input matInput [(ngModel)]="editedStudent.period" name="period">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Carrera</mat-label>
+    <input matInput [(ngModel)]="editedStudent.career" name="career">
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+    <button mat-button (click)="cancel()">Cancelar</button>
+  </div>
+</form>

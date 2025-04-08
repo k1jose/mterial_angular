@@ -1,0 +1,30 @@
+<div class="estilo">
+    <div class="header">
+      <div class="brand-images">
+        @for (brand of brands; track $index) {
+          <img [src]="brand.imageUrl" alt="{{brand.name}}" class="brand-image">
+        }
+      </div>
+    </div>
+  
+    <div class="product-section">
+      <div class="card-container">
+        @for (product of products; track $index) {
+          <mat-card class="product-card">
+            <img mat-card-image [src]="product.imageUrl" alt="{{product.name}}" class="product-image">
+            <mat-card-content>
+              <mat-card-title>{{ product.name }}</mat-card-title>
+              <p>{{ product.description }}</p>
+              <div class="price">
+                @if (product.discount > 0) {
+                  <span class="discount">-{{ product.discount }}%</span>
+                }
+                ${{ product.price }}
+              </div>
+              <button mat-raised-button color="primary" class="add-to-cart">Add +</button>
+            </mat-card-content>
+          </mat-card>
+        }
+      </div>
+    </div>
+  </div>

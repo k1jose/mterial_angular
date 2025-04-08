@@ -1,0 +1,34 @@
+<div class="period-form">
+    <mat-card>
+      <mat-card-title>Selecciona tu Carrera y Período</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="periodForm" (ngSubmit)="onSubmit()">
+          <!-- Selector de Carrera -->
+          <mat-form-field appearance="outline">
+            <mat-label>Selecciona una carrera</mat-label>
+            <mat-select formControlName="career">
+              <mat-option *ngFor="let career of careers" [value]="career.name">
+                {{ career.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <!-- Selector de Período -->
+          <mat-form-field appearance="outline">
+            <mat-label>Selecciona un período</mat-label>
+            <mat-select formControlName="period">
+              <mat-option *ngFor="let period of periods" [value]="period.name">
+                {{ period.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <!-- Botón de envío -->
+          <button mat-raised-button color="primary" type="submit" [disabled]="!periodForm.valid">
+            Guardar
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

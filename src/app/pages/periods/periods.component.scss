@@ -1,0 +1,114 @@
+// Variables de colores
+$primary-blue: #4f9dff; // Azul claro de fondo
+$secondary-blue: #00aaff; // Azul más oscuro
+$hover-blue: #006bb3; // Azul más oscuro para hover
+$disabled-blue: #cfe5ff; // Azul suave para deshabilitado
+$text-color: #4a4a4a; // Color de texto general
+$white: #ffffff; // Blanco para fondos y botones
+
+// Contenedor del formulario
+.period-form {
+  max-width: 700px; /* Aumentamos el tamaño del formulario */
+  margin: 0 auto;
+  padding: 30px;
+  background: linear-gradient(135deg, $primary-blue, $secondary-blue); /* Degradado azul */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+// Estilo de la tarjeta que envuelve el formulario
+mat-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Título de la tarjeta
+mat-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $primary-blue;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Campos del formulario
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Espaciado entre los campos */
+  .mat-form-field-label {
+    color: $primary-blue; /* Color de las etiquetas */
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .mat-input-element {
+    font-size: 1.1rem; /* Tamaño de la fuente más grande */
+    padding: 12px;
+  }
+}
+
+// Estilo de los botones (guardar)
+button.mat-raised-button {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 14px;
+  background-color: $primary-blue;
+  color: $white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+
+  &:hover {
+    background-color: $hover-blue;
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+  }
+
+  &:active {
+    background-color: darken($primary-blue, 10%);
+    transform: translateY(0); /* Revertir elevación al hacer clic */
+  }
+
+  &:disabled {
+    background-color: $disabled-blue;
+    color: #6c757d; /* Color de texto más apagado cuando el botón está deshabilitado */
+  }
+}
+
+// Estilos de los selectores
+mat-select {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo más claro */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e3eaf3; /* Fondo más oscuro en hover */
+  }
+}
+
+// Estilo de las etiquetas
+mat-label {
+  font-weight: 600;
+  color: $primary-blue;
+  font-size: 1.2rem;
+}
+
+// Acciones del formulario (botones)
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  
+  button {
+    margin-left: 10px;
+  }
+}

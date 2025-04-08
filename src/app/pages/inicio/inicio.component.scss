@@ -1,0 +1,15 @@
+.banner {
+    width: 800px; // Ancho fijo del banner (ajusta el valor según tus necesidades)
+    height: 400px; // Alto fijo del banner (ajusta el valor según tus necesidades)
+    overflow: hidden;
+    position: relative; // Necesario para el posicionamiento absoluto de las imágenes
+  
+    img {
+      position: absolute; // Posiciona las imágenes dentro del banner
+      top: 0;
+      left: 0;
+      width: 100%; // Las imágenes ocupan todo el ancho del banner
+      height: 100%; // Las imágenes ocupan todo el alto del banner
+      object-fit: cover; // Ajusta las imágenes para cubrir el banner, manteniendo la proporción
+    }
+  }

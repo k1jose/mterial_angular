@@ -1,0 +1,25 @@
+<div class="categorias-container">
+    <h2>CARRERAS</h2>
+  
+    <div class="categorias-wrapper">
+      <div class="categoria-card" *ngFor="let categoria of categorias">
+        <div class="categoria-content">
+          <h3>{{ categoria.titulo }}</h3>
+          <p>{{ categoria.descripcion }}</p>
+        </div>
+        <div class="categoria-imagen">
+          <img [src]="categoria.imagenUrl" alt="{{ categoria.titulo }}">
+        </div>
+      </div>
+    </div>
+  
+    <div class="botones">
+      <button class="btn-navegacion">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button class="btn-navegacion">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </div>
+  
